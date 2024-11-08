@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="Colin Hughes" name="author"/>
+<meta content="A website dedicated to the fascinating world of mathematics and programming" name="description"/>
+<meta content="programming,mathematics,problems,puzzles" name="keywords"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>#807 Loops of Ropes - Project Euler</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+<link href="favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="favicons/site.webmanifest" rel="manifest"/>
+<link color="#da532c" href="favicons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="favicons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="favicons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<link href="themes/style_main.1724940352.css" rel="stylesheet" type="text/css"/>
+<link href="themes/style_default.1627113674.css" rel="stylesheet" type="text/css"/>
+<script src="js/mathjax_config.js"></script>
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&amp;features=es6"></script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script></head>
+<body>
+<div id="container">
+<header>
+<div>
+<img alt="Project Euler" id="logo" src="themes/logo_default.png"/>
+</div>
+<div id="info_panel">
+		   <a href="search"><img alt="Search Problems" class="icon" src="images/icons/search_engine.png" title="Search Problems"/></a>   <a href="rss2_euler.xml"><img alt="RSS Feed" class="icon" src="images/icons/news_feed.png" title="RSS Feed"/></a>
+</div>
+</header>
+<nav>
+<input class="nav_toggle" id="nav_toggle" type="checkbox"/>
+<label class="nav_toggle_label" for="nav_toggle"><i class="fas fa-bars" id="nav_toggle_icon"></i></label>
+<ul>
+<li><a href="about">About</a></li>
+<li><a href="archives" id="current">Archives</a></li>
+<li><a href="recent">Recent</a></li>
+<li><a href="news">News</a></li>
+<li><a href="register">Register</a></li>
+<li><a href="sign_in">Sign In</a></li>
+</ul>
+</nav>
+<div id="content">
+<div class="center print"><img alt="projecteuler.net" src="images/clipart/print_page_logo.png"/></div>
+<h2>Loops of Ropes</h2><div class="noprint" id="problem_icons"><a href="minimal=807"><img class="icon" src="images/icons/file_html.png" title="Show HTML problem content"/></a> <span class="tooltip"><img class="icon" src="images/icons/info.png"/><span class="tooltiptext_right">Published on Sunday, 11th September 2022, 02:00 am; Solved by 137;<br/>Difficulty rating: 90%</span></span></div><div id="problem_info"><h3>Problem 807</h3></div>
+<div class="problem_content" role="problem">
+<p>Given a circle $C$ and an integer $n &gt; 1$, we perform the following operations.</p>
+<p>In step $0$, we choose two uniformly random points $R_0$ and $B_0$ on $C$.<br>
+In step $i$ ($1 \leq i &lt; n$), we first choose a uniformly random point $R_i$ on $C$ and connect the points $R_{i - 1}$ and $R_i$ with a red rope; then choose a uniformly random point $B_i$ on $C$ and connect the points $B_{i - 1}$ and $B_i$ with a blue rope.<br/>
+In step $n$, we first connect the points $R_{n - 1}$ and $R_0$ with a red rope; then connect the points $B_{n - 1}$ and $B_0$ with a blue rope.<br/>
+Each rope is straight between its two end points, and lies above all previous ropes.</br></p>
+<p>After step $n$, we get a loop of red ropes, and a loop of blue ropes.<br/>
+Sometimes the two loops can be separated, as in the left figure below; sometimes they are "linked", hence cannot be separated, as in the middle and right figures below.</p>
+<div style="text-align:center;">
+<img alt="" class="dark_img" src="project/images/p807.jpg">
+</img></div>
+<p>Let $P(n)$ be the probability that the two loops can be separated.<br/>
+For example, $P(3) = \frac{11}{20}$ and $P(5) \approx 0.4304177690$.</p>
+<p>Find $P(80)$, rounded to $10$ digits after decimal point.</p>
+</div><br/>
+<br/>
+</div> <!--end_content-->
+</div> <!--end_container-->
+<div class="noprint" id="footer">
+Project Euler: <a href="copyright">Copyright Information</a> | <a href="privacy">Privacy Policy</a>
+</div>
+<div id="modal_window">
+<div class="message_body" id="modal_content">
+<p>The page has been left unattended for too long and that link/button is no longer active. Please refresh the page.</p>
+</div>
+</div>
+<script id="page_expire" type="application/json">86400</script>
+<script src="js/general.1681854148.js"></script>
+</body>
+</html>

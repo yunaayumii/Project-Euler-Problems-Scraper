@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="Colin Hughes" name="author"/>
+<meta content="A website dedicated to the fascinating world of mathematics and programming" name="description"/>
+<meta content="programming,mathematics,problems,puzzles" name="keywords"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>#900 DistribuNim II - Project Euler</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+<link href="favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="favicons/site.webmanifest" rel="manifest"/>
+<link color="#da532c" href="favicons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="favicons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="favicons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<link href="themes/style_main.1724940352.css" rel="stylesheet" type="text/css"/>
+<link href="themes/style_default.1627113674.css" rel="stylesheet" type="text/css"/>
+<script src="js/mathjax_config.js"></script>
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&amp;features=es6"></script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script></head>
+<body>
+<div id="container">
+<header>
+<div>
+<img alt="Project Euler" id="logo" src="themes/logo_default.png"/>
+</div>
+<div id="info_panel">
+		   <a href="search"><img alt="Search Problems" class="icon" src="images/icons/search_engine.png" title="Search Problems"/></a>   <a href="rss2_euler.xml"><img alt="RSS Feed" class="icon" src="images/icons/news_feed.png" title="RSS Feed"/></a>
+</div>
+</header>
+<nav>
+<input class="nav_toggle" id="nav_toggle" type="checkbox"/>
+<label class="nav_toggle_label" for="nav_toggle"><i class="fas fa-bars" id="nav_toggle_icon"></i></label>
+<ul>
+<li><a href="about">About</a></li>
+<li><a href="archives" id="current">Archives</a></li>
+<li><a href="recent">Recent</a></li>
+<li><a href="news">News</a></li>
+<li><a href="register">Register</a></li>
+<li><a href="sign_in">Sign In</a></li>
+</ul>
+</nav>
+<div id="content">
+<div class="center print"><img alt="projecteuler.net" src="images/clipart/print_page_logo.png"/></div>
+<h2>DistribuNim II</h2><div class="noprint" id="problem_icons"><a href="minimal=900"><img class="icon" src="images/icons/file_html.png" title="Show HTML problem content"/></a> <span class="tooltip"><img class="icon" src="images/icons/info.png"/><span class="tooltiptext_right">Published on Sunday, 14th July 2024, 05:00 am; Solved by 127;<br/>Difficulty rating: 60%</span></span></div><div id="problem_info"><h3>Problem 900</h3></div>
+<div class="problem_content" role="problem">
+<p>
+Two players play a game with at least two piles of stones. The players alternately take stones from one or more piles, subject to:</p>
+<ol>
+<li>the total number of stones taken is equal to the size of the smallest pile before the move;</li>
+<li>the move cannot take all the stones from a pile.</li>
+</ol>
+<p>
+The player that is unable to move loses.</p>
+<p>
+For example, if the piles are of sizes 2, 2 and 4 then there are four possible moves.
+$$ (2,2,4)\xrightarrow{(1,1,0)}(1,1,4)\quad (2,2,4)\xrightarrow{(1,0,1)}(1,2,3)\quad
+(2,2,4)\xrightarrow{(0,1,1)}(2,1,3)\quad (2,2,4)\xrightarrow{(0,0,2)}(2,2,2)$$</p>
+<p>
+Let $t(n)$ be the smallest nonnegative integer $k$ such that the position with $n$ piles of $n$ stones and a single pile of $n+k$ stones is losing for the first player assuming optimal play.  For example, $t(1) = t(2) = 0$ and $t(3) = 2$.</p>
+<p>
+Define $\displaystyle S(N) = \sum_{n=1}^{2^N} t(n)$.  You are given $S(10) = 361522$.</p>
+<p>
+Find $S(10^4)$. Give your answer modulo $900497239$.
+</p>
+</div><br/>
+<br/>
+</div> <!--end_content-->
+</div> <!--end_container-->
+<div class="noprint" id="footer">
+Project Euler: <a href="copyright">Copyright Information</a> | <a href="privacy">Privacy Policy</a>
+</div>
+<div id="modal_window">
+<div class="message_body" id="modal_content">
+<p>The page has been left unattended for too long and that link/button is no longer active. Please refresh the page.</p>
+</div>
+</div>
+<script id="page_expire" type="application/json">86400</script>
+<script src="js/general.1681854148.js"></script>
+</body>
+</html>

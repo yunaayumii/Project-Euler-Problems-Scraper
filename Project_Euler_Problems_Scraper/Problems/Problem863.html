@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="Colin Hughes" name="author"/>
+<meta content="A website dedicated to the fascinating world of mathematics and programming" name="description"/>
+<meta content="programming,mathematics,problems,puzzles" name="keywords"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>#863 Different Dice - Project Euler</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+<link href="favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="favicons/site.webmanifest" rel="manifest"/>
+<link color="#da532c" href="favicons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="favicons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="favicons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<link href="themes/style_main.1724940352.css" rel="stylesheet" type="text/css"/>
+<link href="themes/style_default.1627113674.css" rel="stylesheet" type="text/css"/>
+<script src="js/mathjax_config.js"></script>
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&amp;features=es6"></script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script></head>
+<body>
+<div id="container">
+<header>
+<div>
+<img alt="Project Euler" id="logo" src="themes/logo_default.png"/>
+</div>
+<div id="info_panel">
+		   <a href="search"><img alt="Search Problems" class="icon" src="images/icons/search_engine.png" title="Search Problems"/></a>   <a href="rss2_euler.xml"><img alt="RSS Feed" class="icon" src="images/icons/news_feed.png" title="RSS Feed"/></a>
+</div>
+</header>
+<nav>
+<input class="nav_toggle" id="nav_toggle" type="checkbox"/>
+<label class="nav_toggle_label" for="nav_toggle"><i class="fas fa-bars" id="nav_toggle_icon"></i></label>
+<ul>
+<li><a href="about">About</a></li>
+<li><a href="archives" id="current">Archives</a></li>
+<li><a href="recent">Recent</a></li>
+<li><a href="news">News</a></li>
+<li><a href="register">Register</a></li>
+<li><a href="sign_in">Sign In</a></li>
+</ul>
+</nav>
+<div id="content">
+<div class="center print"><img alt="projecteuler.net" src="images/clipart/print_page_logo.png"/></div>
+<h2>Different Dice</h2><div class="noprint" id="problem_icons"><a href="minimal=863"><img class="icon" src="images/icons/file_html.png" title="Show HTML problem content"/></a> <span class="tooltip"><img class="icon" src="images/icons/info.png"/><span class="tooltiptext_right">Published on Saturday, 11th November 2023, 07:00 pm; Solved by 215;<br/>Difficulty rating: 35%</span></span></div><div id="problem_info"><h3>Problem 863</h3></div>
+<div class="problem_content" role="problem">
+<p>Using only a six-sided fair dice and a five-sided fair dice, we would like to emulate an $n$-sided fair dice.</p>
+<p>For example, one way to emulate a 28-sided dice is to follow this procedure:</p>
+<ol>
+<li>Roll both dice, obtaining integers $1\le p\le 6$ and $1\le q\le 5$.</li>
+<li>Combine them using $r = 5(p-1) + q$ to obtain an integer $1\le r\le 30$.</li>
+<li>If $r\le 28$, return the value $r$ and stop.</li>
+<li>Otherwise ($r$ being 29 or 30), roll both dice again, obtaining integers $1\le s\le 6$ and $1\le t\le 5$.</li>
+<li>Compute $u = 30(r-29) + 5(s-1) + t$ to obtain an integer $1\le u\le 60$.</li>
+<li>If $u&gt;4$, return the value $((u-5)\bmod 28) + 1$ and stop.</li>
+<li>Otherwise (with $1\le u\le 4$), roll the six-sided dice twice, obtaining integers $1\le v\le 6$ and $1\le w\le 6$.</li>
+<li>Compute $x = 36(u-1) + 6(v-1) + w$ to obtain an integer $1\le x\le 144$.</li>
+<li>If $x&gt;4$, return the value $((x-5)\bmod 28) + 1$ and stop.</li>
+<li>Otherwise (with $1\le x\le 4$), assign $u:=x$ and go back to step 7.</li>
+</ol>
+<p>The expected number of dice rolls in following this procedure is 2.142476 (rounded to 6 decimal places). Note that rolling both dice at the same time is still counted as two dice rolls.</p>
+<p>There exist other more complex procedures for emulating a 28-sided dice that entail a smaller average number of dice rolls. However, the above procedure has the attractive property that the sequence of dice rolled is predetermined: regardless of the outcome, it follows (D5,D6,D5,D6,D6,D6,D6,...), truncated wherever the process stops. In fact, amongst procedures for $n=28$ with this restriction, this one is optimal in the sense of minimising the expected number of rolls needed.</p>
+<p>Different values of $n$ will in general use different predetermined sequences. For example, for $n=8$, the sequence (D5,D5,D5,...) gives an optimal procedure, taking 2.083333... dice rolls on average.</p>
+<p>Define $R(n)$ to be the expected number of dice rolls for an optimal procedure for emulating an $n$-sided dice using only a five-sided and a six-sided dice, considering only those procedures where the sequence of dice rolled is predetermined. So, $R(8) \approx 2.083333$ and $R(28) \approx 2.142476$.</p>
+<p>Let $S(n) = \displaystyle\sum_{k=2}^n R(k)$. You are given that $S(30) \approx 56.054622$.</p>
+<p>Find $S(1000)$. Give your answer rounded to 6 decimal places.</p>
+</div><br/>
+<br/>
+</div> <!--end_content-->
+</div> <!--end_container-->
+<div class="noprint" id="footer">
+Project Euler: <a href="copyright">Copyright Information</a> | <a href="privacy">Privacy Policy</a>
+</div>
+<div id="modal_window">
+<div class="message_body" id="modal_content">
+<p>The page has been left unattended for too long and that link/button is no longer active. Please refresh the page.</p>
+</div>
+</div>
+<script id="page_expire" type="application/json">86400</script>
+<script src="js/general.1681854148.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="Colin Hughes" name="author"/>
+<meta content="A website dedicated to the fascinating world of mathematics and programming" name="description"/>
+<meta content="programming,mathematics,problems,puzzles" name="keywords"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>#693 Finite Sequence Generator - Project Euler</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+<link href="favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="favicons/site.webmanifest" rel="manifest"/>
+<link color="#da532c" href="favicons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="favicons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="favicons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<link href="themes/style_main.1724940352.css" rel="stylesheet" type="text/css"/>
+<link href="themes/style_default.1627113674.css" rel="stylesheet" type="text/css"/>
+<script src="js/mathjax_config.js"></script>
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&amp;features=es6"></script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script></head>
+<body>
+<div id="container">
+<header>
+<div>
+<img alt="Project Euler" id="logo" src="themes/logo_default.png"/>
+</div>
+<div id="info_panel">
+		   <a href="search"><img alt="Search Problems" class="icon" src="images/icons/search_engine.png" title="Search Problems"/></a>   <a href="rss2_euler.xml"><img alt="RSS Feed" class="icon" src="images/icons/news_feed.png" title="RSS Feed"/></a>
+</div>
+</header>
+<nav>
+<input class="nav_toggle" id="nav_toggle" type="checkbox"/>
+<label class="nav_toggle_label" for="nav_toggle"><i class="fas fa-bars" id="nav_toggle_icon"></i></label>
+<ul>
+<li><a href="about">About</a></li>
+<li><a href="archives" id="current">Archives</a></li>
+<li><a href="recent">Recent</a></li>
+<li><a href="news">News</a></li>
+<li><a href="register">Register</a></li>
+<li><a href="sign_in">Sign In</a></li>
+</ul>
+</nav>
+<div id="content">
+<div class="center print"><img alt="projecteuler.net" src="images/clipart/print_page_logo.png"/></div>
+<h2>Finite Sequence Generator</h2><div class="noprint" id="problem_icons"><a href="minimal=693"><img class="icon" src="images/icons/file_html.png" title="Show HTML problem content"/></a> <span class="tooltip"><img class="icon" src="images/icons/info.png"/><span class="tooltiptext_right">Published on Saturday, 14th December 2019, 04:00 pm; Solved by 307;<br/>Difficulty rating: 40%</span></span></div><div id="problem_info"><h3>Problem 693</h3></div>
+<div class="problem_content" role="problem">
+<p>Two positive integers $x$ and $y$ ($x &gt; y$) can generate a sequence in the following manner:</p>
+<ul>
+<li>$a_x = y$ is the first term,</li>
+<li>$a_{z+1} = a_z^2 \bmod z$ for $z = x, x+1,x+2,\ldots$ and</li>
+<li>the generation stops when a term becomes $0$ or $1$.</li>
+</ul>
+<p>The number of terms in this sequence is denoted $l(x,y)$.</p>
+<p>For example, with $x = 5$ and $y = 3$, we get $a_5 = 3$, $a_6 = 3^2 \bmod 5 = 4$, $a_7 = 4^2\bmod 6 = 4$, etc. Giving the sequence of 29 terms:<br/>
+$	3,4,4,2,4,7,9,4,4,3,9,6,4,16,4,16,16,4,16,3,9,6,10,19,25,16,16,8,0		$<br/>
+Hence $l(5,3) = 29$.</p>
+<p>$g(x)$ is defined  to be the maximum value of $l(x,y)$ for $y \lt x$. For example, $g(5) = 29$.</p>
+<p>Further, define $f(n)$ to be the maximum value of $g(x)$ for $x \le n$. For example, $f(100) = 145$ and $f(10\,000) = 8824$.</p>
+<p>Find $f(3\,000\,000)$.</p>
+</div><br/>
+<br/>
+</div> <!--end_content-->
+</div> <!--end_container-->
+<div class="noprint" id="footer">
+Project Euler: <a href="copyright">Copyright Information</a> | <a href="privacy">Privacy Policy</a>
+</div>
+<div id="modal_window">
+<div class="message_body" id="modal_content">
+<p>The page has been left unattended for too long and that link/button is no longer active. Please refresh the page.</p>
+</div>
+</div>
+<script id="page_expire" type="application/json">86400</script>
+<script src="js/general.1681854148.js"></script>
+</body>
+</html>

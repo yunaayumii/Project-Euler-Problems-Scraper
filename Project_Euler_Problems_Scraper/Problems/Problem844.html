@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="Colin Hughes" name="author"/>
+<meta content="A website dedicated to the fascinating world of mathematics and programming" name="description"/>
+<meta content="programming,mathematics,problems,puzzles" name="keywords"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>#844 $k$-Markov Numbers - Project Euler</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+<link href="favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="favicons/site.webmanifest" rel="manifest"/>
+<link color="#da532c" href="favicons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="favicons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="favicons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<link href="themes/style_main.1724940352.css" rel="stylesheet" type="text/css"/>
+<link href="themes/style_default.1627113674.css" rel="stylesheet" type="text/css"/>
+<script src="js/mathjax_config.js"></script>
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&amp;features=es6"></script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script></head>
+<body>
+<div id="container">
+<header>
+<div>
+<img alt="Project Euler" id="logo" src="themes/logo_default.png"/>
+</div>
+<div id="info_panel">
+		   <a href="search"><img alt="Search Problems" class="icon" src="images/icons/search_engine.png" title="Search Problems"/></a>   <a href="rss2_euler.xml"><img alt="RSS Feed" class="icon" src="images/icons/news_feed.png" title="RSS Feed"/></a>
+</div>
+</header>
+<nav>
+<input class="nav_toggle" id="nav_toggle" type="checkbox"/>
+<label class="nav_toggle_label" for="nav_toggle"><i class="fas fa-bars" id="nav_toggle_icon"></i></label>
+<ul>
+<li><a href="about">About</a></li>
+<li><a href="archives" id="current">Archives</a></li>
+<li><a href="recent">Recent</a></li>
+<li><a href="news">News</a></li>
+<li><a href="register">Register</a></li>
+<li><a href="sign_in">Sign In</a></li>
+</ul>
+</nav>
+<div id="content">
+<div class="center print"><img alt="projecteuler.net" src="images/clipart/print_page_logo.png"/></div>
+<h2>$k$-Markov Numbers</h2><div class="noprint" id="problem_icons"><a href="minimal=844"><img class="icon" src="images/icons/file_html.png" title="Show HTML problem content"/></a> <span class="tooltip"><img class="icon" src="images/icons/info.png"/><span class="tooltiptext_right">Published on Saturday, 20th May 2023, 02:00 pm; Solved by 207;<br/>Difficulty rating: 40%</span></span></div><div id="problem_info"><h3>Problem 844</h3></div>
+<div class="problem_content" role="problem">
+<p>Consider positive integer solutions to</p>
+<center>$a^2+b^2+c^2 = 3abc$</center>
+<p>For example, $(1,5,13)$ is a solution. We define a 3-Markov number to be any part of a solution, so $1$, $5$ and $13$ are all 3-Markov numbers. Adding distinct 3-Markov numbers $\le 10^3$ would give $2797$.</p>
+<p>Now we define a $k$-Markov number to be a positive integer that is part of a solution to:</p>
+<center>$\displaystyle \sum_{i=1}^{k}x_i^2=k\prod_{i=1}^{k}x_i,\quad x_i\text{ are positive integers}$</center>
+<p>Let $M_k(N)$ be the sum of $k$-Markov numbers $\le N$. Hence $M_3(10^{3})=2797$, also $M_8(10^8) = 131493335$.</p>
+<p>Define $\displaystyle S(K,N)=\sum_{k=3}^{K}M_k(N)$. You are given $S(4, 10^2)=229$ and $S(10, 10^8)=2383369980$.</p>
+<p>Find $S(10^{18}, 10^{18})$. Give your answer modulo $1\,405\,695\,061$.</p>
+</div><br/>
+<br/>
+</div> <!--end_content-->
+</div> <!--end_container-->
+<div class="noprint" id="footer">
+Project Euler: <a href="copyright">Copyright Information</a> | <a href="privacy">Privacy Policy</a>
+</div>
+<div id="modal_window">
+<div class="message_body" id="modal_content">
+<p>The page has been left unattended for too long and that link/button is no longer active. Please refresh the page.</p>
+</div>
+</div>
+<script id="page_expire" type="application/json">86400</script>
+<script src="js/general.1681854148.js"></script>
+</body>
+</html>

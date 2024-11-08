@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="Colin Hughes" name="author"/>
+<meta content="A website dedicated to the fascinating world of mathematics and programming" name="description"/>
+<meta content="programming,mathematics,problems,puzzles" name="keywords"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>#111 Primes with Runs - Project Euler</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+<link href="favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="favicons/site.webmanifest" rel="manifest"/>
+<link color="#da532c" href="favicons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="favicons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="favicons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<link href="themes/style_main.1724940352.css" rel="stylesheet" type="text/css"/>
+<link href="themes/style_default.1627113674.css" rel="stylesheet" type="text/css"/>
+<script src="js/mathjax_config.js"></script>
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&amp;features=es6"></script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script></head>
+<body>
+<div id="container">
+<header>
+<div>
+<img alt="Project Euler" id="logo" src="themes/logo_default.png"/>
+</div>
+<div id="info_panel">
+		   <a href="search"><img alt="Search Problems" class="icon" src="images/icons/search_engine.png" title="Search Problems"/></a>   <a href="rss2_euler.xml"><img alt="RSS Feed" class="icon" src="images/icons/news_feed.png" title="RSS Feed"/></a>
+</div>
+</header>
+<nav>
+<input class="nav_toggle" id="nav_toggle" type="checkbox"/>
+<label class="nav_toggle_label" for="nav_toggle"><i class="fas fa-bars" id="nav_toggle_icon"></i></label>
+<ul>
+<li><a href="about">About</a></li>
+<li><a href="archives" id="current">Archives</a></li>
+<li><a href="recent">Recent</a></li>
+<li><a href="news">News</a></li>
+<li><a href="register">Register</a></li>
+<li><a href="sign_in">Sign In</a></li>
+</ul>
+</nav>
+<div id="content">
+<div class="center print"><img alt="projecteuler.net" src="images/clipart/print_page_logo.png"/></div>
+<h2>Primes with Runs</h2><div class="noprint" id="problem_icons"><a href="minimal=111"><img class="icon" src="images/icons/file_html.png" title="Show HTML problem content"/></a> <span class="tooltip"><img class="icon" src="images/icons/info.png"/><span class="tooltiptext_right">Published on Friday, 16th December 2005, 06:00 pm; Solved by 8058;<br/>Difficulty rating: 45%</span></span></div><div id="problem_info"><h3>Problem 111</h3></div>
+<div class="problem_content" role="problem">
+<p>Considering $4$-digit primes containing repeated digits it is clear that they cannot all be the same: $1111$ is divisible by $11$, $2222$ is divisible by $22$, and so on. But there are nine $4$-digit primes containing three ones:
+$$1117, 1151, 1171, 1181, 1511, 1811, 2111, 4111, 8111.$$</p>
+<p>We shall say that $M(n, d)$ represents the maximum number of repeated digits for an $n$-digit prime where $d$ is the repeated digit, $N(n, d)$ represents the number of such primes, and $S(n, d)$ represents the sum of these primes.</p>
+<p>So $M(4, 1) = 3$ is the maximum number of repeated digits for a $4$-digit prime where one is the repeated digit, there are $N(4, 1) = 9$ such primes, and the sum of these primes is $S(4, 1) = 22275$. It turns out that for $d = 0$, it is only possible to have $M(4, 0) = 2$ repeated digits, but there are $N(4, 0) = 13$ such cases.</p>
+<p>In the same way we obtain the following results for $4$-digit primes.</p>
+<div class="center">
+<table align="center" border="1" cellpadding="5" cellspacing="0"><tr><td><b>Digit, <i>d</i></b></td>
+<td><b>M(4, <i>d</i>)</b></td>
+<td><b>N(4, <i>d</i>)</b></td>
+<td><b>S(4, <i>d</i>)</b></td>
+</tr><tr><td>0</td>
+<td>2</td>
+<td>13</td>
+<td>67061</td>
+</tr><tr><td>1</td>
+<td>3</td>
+<td>9</td>
+<td>22275</td>
+</tr><tr><td>2</td>
+<td>3</td>
+<td>1</td>
+<td>2221</td>
+</tr><tr><td>3</td>
+<td>3</td>
+<td>12</td>
+<td>46214</td>
+</tr><tr><td>4</td>
+<td>3</td>
+<td>2</td>
+<td>8888</td>
+</tr><tr><td>5</td>
+<td>3</td>
+<td>1</td>
+<td>5557</td>
+</tr><tr><td>6</td>
+<td>3</td>
+<td>1</td>
+<td>6661</td>
+</tr><tr><td>7</td>
+<td>3</td>
+<td>9</td>
+<td>57863</td>
+</tr><tr><td>8</td>
+<td>3</td>
+<td>1</td>
+<td>8887</td>
+</tr><tr><td>9</td>
+<td>3</td>
+<td>7</td>
+<td>48073</td>
+</tr></table></div>
+<p>For $d = 0$ to $9$, the sum of all $S(4, d)$ is $273700$.</p>
+<p>Find the sum of all $S(10, d)$.</p>
+</div><br/>
+<br/>
+</div> <!--end_content-->
+</div> <!--end_container-->
+<div class="noprint" id="footer">
+Project Euler: <a href="copyright">Copyright Information</a> | <a href="privacy">Privacy Policy</a>
+</div>
+<div id="modal_window">
+<div class="message_body" id="modal_content">
+<p>The page has been left unattended for too long and that link/button is no longer active. Please refresh the page.</p>
+</div>
+</div>
+<script id="page_expire" type="application/json">86400</script>
+<script src="js/general.1681854148.js"></script>
+</body>
+</html>

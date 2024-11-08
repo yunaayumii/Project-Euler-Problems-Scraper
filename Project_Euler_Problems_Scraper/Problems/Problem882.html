@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="Colin Hughes" name="author"/>
+<meta content="A website dedicated to the fascinating world of mathematics and programming" name="description"/>
+<meta content="programming,mathematics,problems,puzzles" name="keywords"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>#882 Removing Bits - Project Euler</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+<link href="favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="favicons/site.webmanifest" rel="manifest"/>
+<link color="#da532c" href="favicons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="favicons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="favicons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<link href="themes/style_main.1724940352.css" rel="stylesheet" type="text/css"/>
+<link href="themes/style_default.1627113674.css" rel="stylesheet" type="text/css"/>
+<script src="js/mathjax_config.js"></script>
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&amp;features=es6"></script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script></head>
+<body>
+<div id="container">
+<header>
+<div>
+<img alt="Project Euler" id="logo" src="themes/logo_default.png"/>
+</div>
+<div id="info_panel">
+		   <a href="search"><img alt="Search Problems" class="icon" src="images/icons/search_engine.png" title="Search Problems"/></a>   <a href="rss2_euler.xml"><img alt="RSS Feed" class="icon" src="images/icons/news_feed.png" title="RSS Feed"/></a>
+</div>
+</header>
+<nav>
+<input class="nav_toggle" id="nav_toggle" type="checkbox"/>
+<label class="nav_toggle_label" for="nav_toggle"><i class="fas fa-bars" id="nav_toggle_icon"></i></label>
+<ul>
+<li><a href="about">About</a></li>
+<li><a href="archives" id="current">Archives</a></li>
+<li><a href="recent">Recent</a></li>
+<li><a href="news">News</a></li>
+<li><a href="register">Register</a></li>
+<li><a href="sign_in">Sign In</a></li>
+</ul>
+</nav>
+<div id="content">
+<div class="center print"><img alt="projecteuler.net" src="images/clipart/print_page_logo.png"/></div>
+<h2>Removing Bits</h2><div class="noprint" id="problem_icons"><a href="minimal=882"><img class="icon" src="images/icons/file_html.png" title="Show HTML problem content"/></a> <span class="tooltip"><img class="icon" src="images/icons/info.png"/><span class="tooltiptext_right">Published on Sunday, 17th March 2024, 01:00 am; Solved by 128;<br/>Difficulty rating: 75%</span></span></div><div id="problem_info"><h3>Problem 882</h3></div>
+<div class="problem_content" role="problem">
+<p>Dr. One and Dr. Zero are playing the following partisan game.<br/>
+The game begins with one $1$, two $2$'s, three $3$'s, ..., $n$ $n$'s. Starting with Dr. One, they make moves in turn.<br/>
+Dr. One chooses a number and changes it by removing a $1$ from its binary expansion.<br/>
+Dr. Zero chooses a number and changes it by removing a $0$ from its binary expansion.<br/>
+The player that is unable to move loses.<br/>
+Note that leading zeros are not allowed in any binary expansion; in particular nobody can make a move on the number $0$.</p>
+<p>They soon realize that Dr. Zero can never win the game. In order to make it more interesting, Dr. Zero is allowed to "skip the turn" several times, i.e. passing the turn back to Dr. One without making a move.</p>
+<p>For example, when $n = 2$, Dr. Zero can win the game if allowed to skip $2$ turns. A sample game:
+$$
+[1, 2, 2]\xrightarrow{\textrm{Dr. One}}[1, 0, 2]\xrightarrow{\textrm{Dr. Zero}}[1, 0, 1]\xrightarrow{\textrm{Dr. One}}[1, 0, 0]\xrightarrow[\textrm{skip}]{\textrm{Dr. Zero}}
+[1, 0, 0]\xrightarrow{\textrm{Dr. One}}[0, 0, 0]\xrightarrow[\textrm{skip}]{\textrm{Dr. Zero}}[0, 0, 0].
+$$
+Let $S(n)$ be the minimal number of skips needed so that Dr. Zero has a winning strategy.<br/>
+For example, $S(2) = 2$, $S(5) = 17$, $S(10) = 64$.</p>
+<p>Find $S(10^5)$.</p>
+</div><br/>
+<br/>
+</div> <!--end_content-->
+</div> <!--end_container-->
+<div class="noprint" id="footer">
+Project Euler: <a href="copyright">Copyright Information</a> | <a href="privacy">Privacy Policy</a>
+</div>
+<div id="modal_window">
+<div class="message_body" id="modal_content">
+<p>The page has been left unattended for too long and that link/button is no longer active. Please refresh the page.</p>
+</div>
+</div>
+<script id="page_expire" type="application/json">86400</script>
+<script src="js/general.1681854148.js"></script>
+</body>
+</html>

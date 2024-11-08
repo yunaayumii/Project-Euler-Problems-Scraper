@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="Colin Hughes" name="author"/>
+<meta content="A website dedicated to the fascinating world of mathematics and programming" name="description"/>
+<meta content="programming,mathematics,problems,puzzles" name="keywords"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>#182 RSA Encryption - Project Euler</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+<link href="favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="favicons/site.webmanifest" rel="manifest"/>
+<link color="#da532c" href="favicons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="favicons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="favicons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<link href="themes/style_main.1724940352.css" rel="stylesheet" type="text/css"/>
+<link href="themes/style_default.1627113674.css" rel="stylesheet" type="text/css"/>
+<script src="js/mathjax_config.js"></script>
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&amp;features=es6"></script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script></head>
+<body>
+<div id="container">
+<header>
+<div>
+<img alt="Project Euler" id="logo" src="themes/logo_default.png"/>
+</div>
+<div id="info_panel">
+		   <a href="search"><img alt="Search Problems" class="icon" src="images/icons/search_engine.png" title="Search Problems"/></a>   <a href="rss2_euler.xml"><img alt="RSS Feed" class="icon" src="images/icons/news_feed.png" title="RSS Feed"/></a>
+</div>
+</header>
+<nav>
+<input class="nav_toggle" id="nav_toggle" type="checkbox"/>
+<label class="nav_toggle_label" for="nav_toggle"><i class="fas fa-bars" id="nav_toggle_icon"></i></label>
+<ul>
+<li><a href="about">About</a></li>
+<li><a href="archives" id="current">Archives</a></li>
+<li><a href="recent">Recent</a></li>
+<li><a href="news">News</a></li>
+<li><a href="register">Register</a></li>
+<li><a href="sign_in">Sign In</a></li>
+</ul>
+</nav>
+<div id="content">
+<div class="center print"><img alt="projecteuler.net" src="images/clipart/print_page_logo.png"/></div>
+<h2>RSA Encryption</h2><div class="noprint" id="problem_icons"><a href="minimal=182"><img class="icon" src="images/icons/file_html.png" title="Show HTML problem content"/></a> <span class="tooltip"><img class="icon" src="images/icons/info.png"/><span class="tooltiptext_right">Published on Friday, 15th February 2008, 01:00 pm; Solved by 2860;<br/>Difficulty rating: 60%</span></span></div><div id="problem_info"><h3>Problem 182</h3></div>
+<div class="problem_content" role="problem">
+<p>The RSA encryption is based on the following procedure:</p>
+<p>Generate two distinct primes $p$ and $q$.<br/>Compute $n = pq$ and $\phi = (p - 1)(q - 1)$.<br/>
+Find an integer $e$, $1 \lt e \lt \phi$, such that $\gcd(e, \phi) = 1$.</p>
+<p>A message in this system is a number in the interval $[0, n - 1]$.<br/>
+A text to be encrypted is then somehow converted to messages (numbers in the interval $[0, n - 1]$).<br/>
+To encrypt the text, for each message, $m$, $c = m^e \bmod n$ is calculated.</p>
+<p>To decrypt the text, the following procedure is needed: calculate $d$ such that $ed = 1 \bmod \phi$, then for each encrypted message, $c$, calculate $m = c^d \bmod n$.</p>
+<p>There exist values of $e$ and $m$ such that $m^e \bmod n = m$.<br/>We call messages $m$ for which $m^e \bmod n = m$ unconcealed messages.</p>
+<p>An issue when choosing $e$ is that there should not be too many unconcealed messages.<br/>For instance, let $p = 19$ and $q = 37$.<br/>
+Then $n = 19 \cdot 37 = 703$ and $\phi = 18 \cdot 36 = 648$.<br/>
+If we choose $e = 181$, then, although $\gcd(181,648) = 1$ it turns out that all possible messages $m$ ($0 \le m \le n - 1$) are unconcealed when calculating $m^e \bmod n$.<br/>
+For any valid choice of $e$ there exist some unconcealed messages.<br/>
+It's important that the number of unconcealed messages is at a minimum.</p>
+<p>Choose $p = 1009$ and $q = 3643$.<br/>
+Find the sum of all values of $e$, $1 \lt e \lt \phi(1009,3643)$ and $\gcd(e, \phi) = 1$, so that the number of unconcealed messages for this value of $e$ is at a minimum.</p>
+</div><br/>
+<br/>
+</div> <!--end_content-->
+</div> <!--end_container-->
+<div class="noprint" id="footer">
+Project Euler: <a href="copyright">Copyright Information</a> | <a href="privacy">Privacy Policy</a>
+</div>
+<div id="modal_window">
+<div class="message_body" id="modal_content">
+<p>The page has been left unattended for too long and that link/button is no longer active. Please refresh the page.</p>
+</div>
+</div>
+<script id="page_expire" type="application/json">86400</script>
+<script src="js/general.1681854148.js"></script>
+</body>
+</html>

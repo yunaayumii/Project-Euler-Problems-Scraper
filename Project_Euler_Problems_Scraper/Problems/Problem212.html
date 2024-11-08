@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="Colin Hughes" name="author"/>
+<meta content="A website dedicated to the fascinating world of mathematics and programming" name="description"/>
+<meta content="programming,mathematics,problems,puzzles" name="keywords"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>#212 Combined Volume of Cuboids - Project Euler</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+<link href="favicons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="favicons/site.webmanifest" rel="manifest"/>
+<link color="#da532c" href="favicons/safari-pinned-tab.svg" rel="mask-icon"/>
+<link href="favicons/favicon.ico" rel="shortcut icon"/>
+<meta content="#da532c" name="msapplication-TileColor"/>
+<meta content="favicons/browserconfig.xml" name="msapplication-config"/>
+<meta content="#ffffff" name="theme-color"/>
+<link href="themes/style_main.1724940352.css" rel="stylesheet" type="text/css"/>
+<link href="themes/style_default.1627113674.css" rel="stylesheet" type="text/css"/>
+<script src="js/mathjax_config.js"></script>
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?version=4.8.0&amp;features=es6"></script>
+<script async="" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script></head>
+<body>
+<div id="container">
+<header>
+<div>
+<img alt="Project Euler" id="logo" src="themes/logo_default.png"/>
+</div>
+<div id="info_panel">
+		   <a href="search"><img alt="Search Problems" class="icon" src="images/icons/search_engine.png" title="Search Problems"/></a>   <a href="rss2_euler.xml"><img alt="RSS Feed" class="icon" src="images/icons/news_feed.png" title="RSS Feed"/></a>
+</div>
+</header>
+<nav>
+<input class="nav_toggle" id="nav_toggle" type="checkbox"/>
+<label class="nav_toggle_label" for="nav_toggle"><i class="fas fa-bars" id="nav_toggle_icon"></i></label>
+<ul>
+<li><a href="about">About</a></li>
+<li><a href="archives" id="current">Archives</a></li>
+<li><a href="recent">Recent</a></li>
+<li><a href="news">News</a></li>
+<li><a href="register">Register</a></li>
+<li><a href="sign_in">Sign In</a></li>
+</ul>
+</nav>
+<div id="content">
+<div class="center print"><img alt="projecteuler.net" src="images/clipart/print_page_logo.png"/></div>
+<h2>Combined Volume of Cuboids</h2><div class="noprint" id="problem_icons"><a href="minimal=212"><img class="icon" src="images/icons/file_html.png" title="Show HTML problem content"/></a> <span class="tooltip"><img class="icon" src="images/icons/info.png"/><span class="tooltiptext_right">Published on Saturday, 11th October 2008, 06:00 am; Solved by 1530;<br/>Difficulty rating: 70%</span></span></div><div id="problem_info"><h3>Problem 212</h3></div>
+<div class="problem_content" role="problem">
+<p>An <dfn>axis-aligned cuboid</dfn>, specified by parameters $\{(x_0, y_0, z_0), (dx, dy, dz)\}$, consists of all points $(X,Y,Z)$ such that $x_0 \le X \le x_0 + dx$, $y_0 \le Y \le y_0 + dy$ and $z_0 \le Z \le z_0 + dz$.  The volume of the cuboid is the product, $dx \times dy \times dz$.  The <dfn>combined volume</dfn> of a collection of cuboids is the volume of their union and will be less than the sum of the individual volumes if any cuboids overlap.</p>
+<p>Let $C_1, \dots, C_{50000}$ be a collection of $50000$ axis-aligned cuboids such that $C_n$ has parameters</p>
+
+\begin{align}
+x_0 &amp;= S_{6n - 5} \bmod 10000\\
+y_0 &amp;= S_{6n - 4} \bmod 10000\\
+z_0 &amp;= S_{6n - 3} \bmod 10000\\
+dx &amp;= 1 + (S_{6n - 2} \bmod 399)\\
+dy &amp;= 1 + (S_{6n - 1} \bmod 399)\\
+dz &amp;= 1 + (S_{6n} \bmod 399)
+\end{align}
+
+<p>where $S_1,\dots,S_{300000}$ come from the "Lagged Fibonacci Generator":</p>
+<ul style="list-style-type:none;"><li>For $1 \le k \le 55$, $S_k = [100003 - 200003k + 300007k^3] \pmod{1000000}$.</li><li>For $56 \le k$, $S_k = [S_{k -24} + S_{k - 55}] \pmod{1000000}$.</li></ul>
+<p>Thus, $C_1$ has parameters $\{(7,53,183),(94,369,56)\}$, $C_2$ has parameters $\{(2383,3563,5079),(42,212,344)\}$, and so on.</p>
+<p>The combined volume of the first $100$ cuboids, $C_1, \dots, C_{100}$, is $723581599$.</p>
+<p>What is the combined volume of all $50000$ cuboids, $C_1, \dots, C_{50000}$?</p>
+</div><br/>
+<br/>
+</div> <!--end_content-->
+</div> <!--end_container-->
+<div class="noprint" id="footer">
+Project Euler: <a href="copyright">Copyright Information</a> | <a href="privacy">Privacy Policy</a>
+</div>
+<div id="modal_window">
+<div class="message_body" id="modal_content">
+<p>The page has been left unattended for too long and that link/button is no longer active. Please refresh the page.</p>
+</div>
+</div>
+<script id="page_expire" type="application/json">86400</script>
+<script src="js/general.1681854148.js"></script>
+</body>
+</html>
